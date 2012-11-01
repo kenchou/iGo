@@ -1,0 +1,55 @@
+@charset "utf-8";
+td.alt {
+    background:#ecf6fc;  /*这行将给所有的tr加上背景色*/
+}
+ 
+td.over {
+    /*background:#bcd4ec;*/  /*这个将是鼠标高亮行的背景色*/
+    border: 1px dashed #FFFF99;
+}
+
+td.blackover {
+    /*background:#bcd4ec;*/  /*黑子提示*/
+    border: 1px dashed #000000;
+}
+td.whiteover {
+    /*background:#bcd4ec;*/  /*白子提示*/
+    border: 1px dashed #FFFFFF;
+}
+
+td.currPoint {
+    /*background:#bcd4ec;*/  /*最后一步提示*/
+    border: 1px dashed #FF0000;
+}
+
+table#chessboard {
+	background: url(../images/chessboard.png) no-repeat;
+	width: 515px;
+	height: 515px;
+	text-align: center;
+	vertical-align: middle;
+	padding: 0;
+}
+
+#chessboard td {
+	width: 25px;
+	height: 25px;
+	padding: 0;
+	margin: 0;
+/*	border: 1px dashed #FFFF99;*/
+}
+
+#pawn {
+	width: 25px;
+	height: 25px;
+	padding: 0;
+	margin: 0;
+}
+
+.info {
+	border: 1px solid #666;
+}
+
+#result {
+	color: #FF0000;
+}

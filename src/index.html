@@ -1,0 +1,669 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Go</title>
+<script type="text/javascript" src="javascripts/jquery.js"></script>
+<link href="style/go.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<div>
+<table cellpadding="0" cellspacing="0" id="chessboard">
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+</table>
+</div>
+<div id="timer">{Timer}</div>
+<div id="userinfo">{UserInfo}</div>
+<div id="login">
+<form id="form1" method="get" action="play.php">
+<fieldset>
+<legend>Login</legend>
+    <input type="hidden" name="method" value="login" />
+	<label for="username">username</label>
+	<input type="text" name="username" id="username" />
+	<input type="radio" name="color" id="color_black" value="black" />
+	<label for="color_black">black</label>
+	<input type="radio" name="color" id="color_white" value="white" />
+	<label for="color_white">white</label>
+	<input type="submit" name="button" id="button_login" value="提交" />
+</fieldset>
+</form></div>
+<div>
+<div id="result"></div>
+<form id="formToolbar" method="post" action="">
+<fieldset>
+<legend>Toolbar</legend>
+    <input type="button" name="btnNewGame" id="btnNewGame" value="New Game" />
+    <input type="button" name="btnPass" id="btnPass" value="Pass" />
+    <input type="button" name="btnSurrender" id="btnSurrender" value="Surrender" />
+</fieldset>    
+</form>
+</div>
+<div id="info" class="info">
+Status
+</div>
+
+<div id="debug" class="info">
+Debug Info
+</div>
+
+<script type="text/javascript">
+function render()
+{
+    $.getJSON('play.php', {'method': 'getStepNumber'}, function(ret) {
+        stepNumber = ret.Server.getStepNumber.response;
+    });
+    $.getJSON('play.php', {'method': 'getCollection'}, function(ret) {
+        try {
+            godata = ret.Server.getCollection;
+            if ($.browser.mozilla) {
+                // $('#debug').text(godata.toSource());
+            }
+            
+            $("#chessboard td").each(function () {
+                index = $(this).attr('tag');
+                key = "key_" + index;
+                n = godata[key];
+                
+                c = $(this).children('img').attr('alt');
+                if (c == 'undefined') c='';
+                
+                //alert("n="+n+" c="+c+" i="+index+" k="+key);
+                if ('X' == n) {
+                    n = 'black';
+                } else if ('O' == n) {
+                    n = 'white';
+                } else {
+                    n = '';
+                }
+                
+                if (c != n) {
+                    if ('' == n) {
+                        pawn = '';
+                    } else {
+                        pawn = '<img src="images/' + n + '.gif" width="20" height="20" alt="' + n + '" />';
+                    }
+                    $(this).html(pawn);
+                }
+            });
+            // $('#debug').text(ret.toSource());
+        } catch (e) {
+            if ($.browser.mozilla) {
+                $('#debug').text(e.toSource());
+            } else {
+                alert(e.message);
+            }
+        }
+    });
+    $.getJSON('play.php', {'method': 'getLastStep'}, function(ret) {
+        var lastStep = ret.Server.getLastStep.response;
+        var tag = "#chessboard td[tag=" + lastStep + "]";
+        $("#chessboard td").removeClass("currPoint");
+        $(tag).addClass("currPoint");
+    });
+}
+
+$(document).ready(function() {  //这个就是传说的ready
+	color = '';
+	username = '';
+	godata = null;
+	stepNumber = 0;
+	gameover = false;
+    
+    //初始化，测试
+    $.ajax({
+        url: 'play.php?method=sayHello',
+        type: 'GET',
+        dataType: 'json',
+        timeout: 1000,
+        error: function(obj){
+            alert('Connect error!');
+        },
+        success: function(json){
+            // do something with xml
+            $('#info').text(json.Server.sayHello.response);
+            if ($.browser.mozilla) {
+                $('#debug').text(json.toSource());
+            }
+        }
+    });
+
+    //初始化棋盘
+    $("#chessboard td").each(function(i) {
+        $(this).attr('tag', i);
+    });
+    //显示最新的棋局
+    render();
+    
+    //检查用户信息
+    $.getJSON('play.php', {'method': 'getUserInfo'}, function(ret) {
+        userInfo = ret.Server.getUserInfo;
+        username = userInfo.username;
+        color = userInfo.color;
+        
+        //alert("U:"+username+" C:"+color + " R:"+userInfo.toSource());
+        
+        if ("" == username || "" == color) {
+            $("#chessboard").hide();
+            $("#login").show();
+        } else {
+            $("#chessboard").show();
+            $("#login").hide();
+        }
+        $("#userinfo").text("Name: " + username + " Color:" + color);
+    });
+    //登录事件
+    $("#button_login").click(function() {
+        //var username;
+        //var color;
+        username = $("#username").val();
+        color = $(":radio[name=color]:checked").val();
+        $.getJSON('play.php', {'method': 'login', 'username': username, 'color': color}, function(ret) {
+            userInfo = ret.Server.login;
+            username = userInfo.username;
+            color = userInfo.color;
+            window.location.reload();
+        });
+        return false;
+    });
+    //为棋盘落点添加事件
+    $("#chessboard td") //查找棋盘中所有单元格
+        //鼠标移到单元格上时，给单元格加class
+        .mouseover(function() {
+            $(this).addClass(color + "over");
+            $('#info').html('index(' +$(this).attr('tag') + ') size(' + $(this).width() + ' x ' + $(this).height() + ')');
+        })
+        //鼠标移出单元格时，删除class
+        .mouseout(function() {
+            $(this).removeClass(color+ "over");
+        })
+        //鼠标点击单元格时，发送当前格坐标到服务端，并取得返回结果
+        .click(function() {
+              //TODO: call service here.'
+              index = $(this).attr('tag');
+              
+              try {
+                //alert(index + ' ' + color);
+                  $.getJSON('play.php', {'method': 'doStep', 'index': index, 'color': color}, function(json) {
+                      ret = json.Server.doStep;
+                      if (ret.status == 'success') {
+                        $(this).html('<img src="images/' + color + '.gif" width="20" height="20" alt="' + color + '" />');
+                      } else {
+                        alert('Server say: ' + ret.response.message);
+                      }
+                      if ($.browser.mozilla) {
+                        $('#debug').html(ret.response.toSource());
+                      }
+                  });
+                  // color = (color == 'black') ? 'white' : 'black'; //轮流交换颜色。
+              } catch (e) {
+                  alert(e.name + ": " + e.message);
+              }
+        });
+    $("#btnNewGame").click(function () {
+        $.getJSON('play.php', {'method': 'newGame'}, function(json) {
+            gameover = false;
+            if ($.browser.mozilla) {
+                alert(json.toSource());
+            }
+            window.location.reload();
+        })
+    });
+    $("#btnPass").click(function () {
+        $.getJSON('play.php', {'method': 'pass'}, function(json) {
+            ret = json.Server.pass;
+            if ('failed' == ret.status) {
+                alert(ret.response.message);
+            }else {
+                alert(ret.response);
+            }
+        })
+    });
+    $("#btnSurrender").click(function () {
+        $.getJSON('play.php', {'method': 'surrender'}, function(json) {
+            if ($.browser.mozilla) {
+                alert(json.toSource());
+            }
+        })
+    });
+    //定时器，检查棋局是否需要更新
+    window.setInterval(function () {
+        $("#timer").text((new Date()).toString());
+        $.getJSON('play.php', {'method': 'getStatus'}, function(ret) {
+            var status = ret.Server.getStatus;
+            if (stepNumber != status.stepNumber) {
+                render();
+            }
+            if ('gameover' == status.status) {
+                gameover = true;
+                
+            } else if ('surrender' == status.status) {
+                gameover = true;
+                $("#result").html(status.pass + ' surrender');
+            } else {
+                $("#result").html(status.status);
+                $("#debug").html(status.toSource());
+            }
+        });
+        if (gameover) {
+            $.getJSON('play.php', {'method': 'getScore'}, function(ret) {
+                    var score = ret.Server.getScore;
+                    if ('failed' == score.status) {
+                        $("#debug").html(score.response.message);
+                        $("#result").html('Error:' + score.response.message);
+                    }else {
+                        black = score.black;
+                        white = score.white;
+                        gray = score.gray;
+                        
+                        b = black + gray / 2;
+                        w = white + gray /2;
+                        $("#result").html('Result:' + 'black = ' + black + ' white = ' + white);
+                        $("#debug").html(score.toSource());
+                    }
+            });
+        }
+    }, 2000);
+});
+</script>
+</body>
+</html>
